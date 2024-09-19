@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2EDED"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/apellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="Apellidos"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/correo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombres" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="296dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="38dp"
+        android:fontFamily="sans-serif-light"
+        android:text=" Registro en conferencia de Computación"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nombres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <EditText
+        android:id="@+id/nombres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:hint="Nombres"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/apellidos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/telefono"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apellidos" />
+
+    <EditText
+        android:id="@+id/telefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:hint="Teléfono"
+        android:inputType="phone"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/dni"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correo" />
+
+    <Spinner
+        android:id="@+id/grupoSanguineo"
+        android:layout_width="186dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="233dp"
+        android:backgroundTint="#000000"
+        android:foregroundTint="@color/black"
+        android:outlineAmbientShadowColor="#FFFFFF"
+        android:outlineSpotShadowColor="#0D0C0C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grupo sanguíneo"
+        android:textColor="#87000000"
+        app:layout_constraintBottom_toTopOf="@+id/grupoSanguineo"
+        app:layout_constraintStart_toStartOf="@+id/grupoSanguineo"
+        app:layout_constraintTop_toBottomOf="@+id/dni" />
+
+    <EditText
+        android:id="@+id/dni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:ems="10"
+        android:hint="DNI"
+        android:inputType="number"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefono" />
+
+    <Button
+        android:id="@+id/registro"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#589D56"
+        android:text="Registrar "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grupoSanguineo" />
+
+    <Button
+        android:id="@+id/leerDatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#DC816D"
+        android:text="Leer datos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registro" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
